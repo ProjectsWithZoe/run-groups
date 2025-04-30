@@ -30,7 +30,7 @@ function CreateGroup() {
     <div className="max-w-2xl mx-4">
       <h1 className="text-xl font-bold text-gray-900 my-4">Create your Running Group</h1>
       
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-2">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700">
             Group Name
@@ -42,7 +42,7 @@ function CreateGroup() {
             value={formData.name}
             onChange={handleChange}
             required
-            className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+            className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
           />
         </div>
 
@@ -57,7 +57,7 @@ function CreateGroup() {
             value={formData.location}
             onChange={handleChange}
             required
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+            className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
           />
         </div>
 
@@ -73,7 +73,7 @@ function CreateGroup() {
               value={formData.date}
               onChange={handleChange}
               required
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+              className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
             />
           </div>
 
@@ -88,7 +88,7 @@ function CreateGroup() {
               value={formData.time}
               onChange={handleChange}
               required
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+              className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
             />
           </div>
         </div>
@@ -101,7 +101,7 @@ function CreateGroup() {
   name="maxMembers"
   value={formData.maxMembers}
   onChange={handleChange}
-  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+  className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
 >
   <option value="2">2</option>
   <option value="3">3</option>
@@ -113,6 +113,21 @@ function CreateGroup() {
   <option value="9">9</option>
   <option value="10">10</option>
 </select>
+        </div>
+
+        <div>
+          <label htmlFor="runDistance" className="block text-sm font-medium text-gray-700">
+            Distance
+          </label>
+          <input
+            type="number"
+            id="runDistance"
+            name="runDistance"
+            value={formData.runDistance}
+            onChange={handleChange}
+            required
+            className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+          />
         </div>
 
         <div>

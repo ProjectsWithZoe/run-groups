@@ -8,7 +8,7 @@ import GroupDetails from './pages/GroupDetails';
 function App() {
   return (
     <Router>
-      <div className="h-screen overflow-hidden bg-gray-50">
+      <div className="h-screen bg-gray-100">
         <Navbar />
         <main className="h-full flex flex-col justify-between">
           <Routes>
