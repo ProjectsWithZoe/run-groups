@@ -30,7 +30,7 @@ function CreateGroup() {
   };
 
   return (
-    <div className="max-w-2xl mx-4">
+    <div className="max-w-2xl overflow-hidden mx-4">
       <h1 className="text-xl font-bold text-gray-900 my-4">Create your Running Group</h1>
       
       <form onSubmit={handleSubmit} className="space-y-2">
