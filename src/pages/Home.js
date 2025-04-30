@@ -4,14 +4,14 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 function Home() {
   return (
     <div className="space-y-8">
-      <section className="text-center py-12">
+      <section className="text-center py-12 m-4">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
           Find Your Running Community
         </h1>
         <p className="text-xl text-gray-600 mb-8">
           Join local running groups or create your own. Run together, stay motivated!
         </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
+        <div className=" m-4 flex flex-col sm:flex-row justify-center gap-4">
           <Link
             to="/create-group"
             className="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-600 transition-colors"
@@ -28,7 +28,7 @@ function Home() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Featured Groups</h2>
+        <h2 className="text-2xl font-bold text-gray-900 m-8">Featured Groups</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Example group cards - these would be replaced with real data */}
           {[1, 2, 3].map((group) => (
