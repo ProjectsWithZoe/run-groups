@@ -9,6 +9,9 @@ function CreateGroup() {
     date: '',
     time: '',
     maxMembers: '',
+    distance: '',
+    runDistance: '',
+    distanceUnits: 'km'
   });
 
   const handleChange = (e) => {
@@ -115,19 +118,36 @@ function CreateGroup() {
 </select>
         </div>
 
-        <div>
-          <label htmlFor="runDistance" className="block text-sm font-medium text-gray-700">
-            Distance
-          </label>
-          <input
-            type="number"
-            id="runDistance"
-            name="runDistance"
-            value={formData.runDistance}
-            onChange={handleChange}
-            required
-            className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
-          />
+        <div className='flex gap-4'>
+          <div className='flex-1'>
+            <label htmlFor="runDistance" className="block text-sm font-medium text-gray-700">
+              Distance
+            </label>
+            <input
+              type="number"
+              id="runDistance"
+              name="runDistance"
+              value={formData.runDistance}
+              onChange={handleChange}
+              required
+              className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+            />
+          </div>
+          <div className='w-24'>
+            <label htmlFor="distanceUnits" className="block text-sm font-medium text-gray-700">
+              Units
+            </label>
+            <select
+              id="distanceUnits"
+              name="distanceUnits"
+              value={formData.distanceUnits}
+              onChange={handleChange}
+              className="mt-1 p-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+            >
+              <option value="km">KM</option>
+              <option value="mi">MI</option>
+            </select>
+          </div>
         </div>
 
         <div>
