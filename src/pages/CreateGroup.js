@@ -9,7 +9,6 @@ function CreateGroup() {
     date: '',
     time: '',
     maxMembers: '',
-    description: '',
   });
 
   const handleChange = (e) => {
@@ -28,10 +27,10 @@ function CreateGroup() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto">
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">Create a Running Group</h1>
+    <div className="max-w-2xl mx-4">
+      <h1 className="text-xl font-bold text-gray-900 my-4">Create your Running Group</h1>
       
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700">
             Group Name
@@ -43,7 +42,7 @@ function CreateGroup() {
             value={formData.name}
             onChange={handleChange}
             required
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+            className="mt-1 p-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
           />
         </div>
 
@@ -98,33 +97,47 @@ function CreateGroup() {
           <label htmlFor="maxMembers" className="block text-sm font-medium text-gray-700">
             Maximum Number of Members
           </label>
-          <input
-            type="number"
-            id="maxMembers"
-            name="maxMembers"
-            value={formData.maxMembers}
-            onChange={handleChange}
-            min="2"
-            required
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
-          />
+          <select
+  name="maxMembers"
+  value={formData.maxMembers}
+  onChange={handleChange}
+  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
         </div>
 
         <div>
           <label htmlFor="description" className="block text-sm font-medium text-gray-700">
-            Description
+            Run Details
           </label>
           <textarea
             id="description"
             name="description"
+            placeholder='e.g SE16 3TA, opposite the big Asda. 10 minute warm up. Potentially a post-run pint?'
             value={formData.description}
             onChange={handleChange}
-            rows="4"
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
+            rows="2"
+            className="mt-1 block italic w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"
           />
         </div>
+        
 
-        <div className="flex justify-end">
+        <div className="flex justify-between">
+        <button
+            onClick={()=>{navigate('/')}}
+            className="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-600 transition-colors"
+          >
+            Back
+          </button>
           <button
             type="submit"
             className="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-600 transition-colors"

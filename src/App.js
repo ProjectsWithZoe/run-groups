@@ -8,9 +8,9 @@ import GroupDetails from './pages/GroupDetails';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50">
+      <div className="h-screen overflow-hidden bg-gray-50">
         <Navbar />
-        <main className="container mx-auto px-4 py-8">
+        <main className="h-full flex flex-col justify-between">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/create-group" element={<CreateGroup />} />
