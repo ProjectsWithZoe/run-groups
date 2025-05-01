@@ -8,12 +8,31 @@ function MapComponent() {
     const map = new mapboxgl.Map({
       container: "map", // container ID
       style: "mapbox://styles/mapbox/streets-v12", // style URL
-      center: [-74.5, 40], // starting position [lng, lat]
+      center: [51.5, 0.12], // starting position [lng, lat]
       zoom: 9, // starting zoom
     });
+
+    map.addControl(new mapboxgl.GeolocateControl({
+        positionOptions: {
+            enableHighAccuracy: true
+        },
+        trackUserLocation: true,
+        //showUserHeading: true
+    }));
   }, []);
 
-  return <div className="flex justify-content-center"><div id="map" style={{ width: "90vw", height: "20vh", justify:"center " }}></div></div>;
+  return (
+    <div className="flex justify-center w-full">
+      <div 
+        id="map" 
+        className="rounded-lg overflow-hidden shadow-md"
+        style={{ 
+          width: "90vw", 
+          height: "20vh",
+        }}
+      />
+    </div>
+  );
 }
 
 export default MapComponent;
