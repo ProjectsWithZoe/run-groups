@@ -3,9 +3,8 @@ import { useEffect } from "react";
 
 function MapComponent() {
   useEffect(() => {
-    mapboxgl.accessToken =
-      "pk.eyJ1IjoicHJvamVjdHN3aXRoem9lIiwiYSI6ImNtOTN6djZpcjBrOG0yanF2bXhxNHZocTIifQ.tfm3YkOdWnOgLqbtx8qBGw";
-    const map = new mapboxgl.Map({
+    mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_API_TOKEN
+        const map = new mapboxgl.Map({
       container: "map", // container ID
       style: "mapbox://styles/mapbox/streets-v12", // style URL
       center: [51.5, 0.12], // starting position [lng, lat]
