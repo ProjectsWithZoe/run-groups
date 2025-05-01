@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import MapComponent from '../components/MapComponent';
 
 function Home() {
   return (
@@ -25,6 +26,10 @@ function Home() {
             Find Groups
           </Link>
         </div>
+      </section>
+
+      <section>
+        <MapComponent/>
       </section>
 
       <section>
